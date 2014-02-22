@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tests>
+  <test-case name="t01" relPath="3_InstallAndConfig\01_CheckSBMServicesAvailable.xml" />
+  <test-case name="t02" relPath="3_InstallAndConfig\02_LoginToSBMWorkspace.xml" />
+
+  <test-case name="t05" relPath="3_InstallAndConfig\05_LoginSbmRepository.xml" />
+  <test-case name="t06" relPath="3_InstallAndConfig\06_ImportRLMSolution.xml" />
+
+
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_02_ReleaseTrain.xml" />
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_04_Approvals.xml" />
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_02_ReleaseTrain.xml" /><!-- we need to promote RT twice -->
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_01_ApplicationRelease.xml" />
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_03_Environment.xml" />
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_07_ManualDeploymentTask.xml" />  
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_06_Runbook.xml" />
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_08_SampleBusinessRequest.xml" />
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_09_SampleDevelopmentTask.xml" />
+  <test-case name="t08" relPath="3_InstallAndConfig\08_upgrade\08_05_Turnover.xml" />
+
+  <test-case name="t09" relPath="3_InstallAndConfig\09_VerifyActivities.xml" />
+
+  <test-case name="t02" relPath="3_InstallAndConfig\02_LoginToSBMWorkspace.xml" />
+  <test-case name="t10" relPath="3_InstallAndConfig\10_SetRolesAll.xml" />
+</tests>

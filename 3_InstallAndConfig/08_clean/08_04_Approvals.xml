@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseName>Promote Approvals</TestCaseName>
+  <Description />
+  <Author>mgrybyk</Author>
+  <TestSteps>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestStart</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test starts</Steps>
+      <Instance />
+      <StepNumber>1</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.ProcessAppSnapshots</FunctionalArea>
+      <ActionName>SelectProcessAppSnapshotsSection</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Selects "Process App Snapshots" section in SBM Repository. No parameters needed.</Steps>
+      <Instance />
+      <StepNumber>2</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.ProcessAppSnapshots</FunctionalArea>
+      <ActionName>SelectSnapshot</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>SnapshotName</ParameterName>
+          <ParameterValue><![CDATA[RLM - Approvals]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SolutionName</ParameterName>
+          <ParameterValue><![CDATA[!RLMsolution!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Approvals</Steps>
+      <Instance />
+      <StepNumber>3</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.ProcessAppSnapshots</FunctionalArea>
+      <ActionName>PressPromote</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Press Promote button</Steps>
+      <Instance />
+      <StepNumber>4</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.ProcessAppSnapshots</FunctionalArea>
+      <ActionName>SelectEnvironment</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>Destination</ParameterName>
+          <ParameterValue><![CDATA[!environment!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Select Destination Environment</Steps>
+      <Instance />
+      <StepNumber>5</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Common.OS.System.Threading</FunctionalArea>
+      <ActionName>Wait</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>Interval</ParameterName>
+          <ParameterValue><![CDATA[!15seconds!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Too many entities, so we NEED to wait 15s</Steps>
+      <Instance />
+      <StepNumber>6</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.ProcessAppSnapshots</FunctionalArea>
+      <ActionName>SelectPromotionEntities</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Select Entities for Promotion</Steps>
+      <Instance />
+      <StepNumber>7</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.ProcessAppSnapshots</FunctionalArea>
+      <ActionName>DoneEndpoints</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Just press Done</Steps>
+      <Instance />
+      <StepNumber>8</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.ProcessAppSnapshots</FunctionalArea>
+      <ActionName>PromoteSummary</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Finally press Promote</Steps>
+      <Instance />
+      <StepNumber>9</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.ProcessAppSnapshots</FunctionalArea>
+      <ActionName>FinishPromote</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Press Close button</Steps>
+      <Instance />
+      <StepNumber>10</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestEnd</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test ends</Steps>
+      <Instance />
+      <StepNumber>11</StepNumber>
+    </TestStep>
+  </TestSteps>
+  <Columns>
+    <Column width="10">StepNumber</Column>
+    <Column width="43.57">FunctionalArea</Column>
+    <Column width="32.29">ActionName</Column>
+    <Column width="24">ExecutionFlow</Column>
+    <Column width="15.43">ParameterName</Column>
+    <Column width="15.29">ParameterValue</Column>
+    <Column width="7.71">Instance</Column>
+    <Column width="76.43">Steps</Column>
+  </Columns>
+</TestCase>

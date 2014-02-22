@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseName />
+  <Description />
+  <Author>dverbovskiy</Author>
+  <TestSteps>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestStart</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test starts</Steps>
+      <Instance />
+      <StepNumber>1</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.VMware.VMClient</FunctionalArea>
+      <ActionName>Connect</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>vSphereUser</ParameterName>
+          <ParameterValue><![CDATA[!vSphereUser!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>vSpherePassword</ParameterName>
+          <ParameterValue><![CDATA[!vSpherePassword!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>vSphereURL</ParameterName>
+          <ParameterValue><![CDATA[!vSphereURL!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Initialize vSphere client</Steps>
+      <Instance>vSph</Instance>
+      <StepNumber>2</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.VMware.VMClient</FunctionalArea>
+      <ActionName>RevertToSnapshot</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>VmName</ParameterName>
+          <ParameterValue><![CDATA[!dbVmHost!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SnapshotName</ParameterName>
+          <ParameterValue><![CDATA[!dbVmSnapshot!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Revert DB vm</Steps>
+      <Instance>vSph</Instance>
+      <StepNumber>3</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.VMware.VMClient</FunctionalArea>
+      <ActionName>PowerON</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>VmName</ParameterName>
+          <ParameterValue><![CDATA[!dbVmHost!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>PowerON DB vm if it's off</Steps>
+      <Instance>vSph</Instance>
+      <StepNumber>4</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.VMware.VMClient</FunctionalArea>
+      <ActionName>RevertToSnapshot</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>VmName</ParameterName>
+          <ParameterValue><![CDATA[!sbmVmHost!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SnapshotName</ParameterName>
+          <ParameterValue><![CDATA[!sbmVmSnapshot!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Revert SBM vm</Steps>
+      <Instance>vSph</Instance>
+      <StepNumber>5</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.VMware.VMClient</FunctionalArea>
+      <ActionName>PowerON</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>VmName</ParameterName>
+          <ParameterValue><![CDATA[!sbmVmHost!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>PowerON SBM vm if it's off</Steps>
+      <Instance>vSph</Instance>
+      <StepNumber>6</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.VMware.VMClient</FunctionalArea>
+      <ActionName>Disconnect</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Closes connection</Steps>
+      <Instance>vSph</Instance>
+      <StepNumber>7</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestEnd</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test ends</Steps>
+      <Instance />
+      <StepNumber>8</StepNumber>
+    </TestStep>
+  </TestSteps>
+  <Columns>
+    <Column width="10">StepNumber</Column>
+    <Column width="28.29">FunctionalArea</Column>
+    <Column width="21.57">ActionName</Column>
+    <Column width="24">ExecutionFlow</Column>
+    <Column width="16.14">ParameterName</Column>
+    <Column width="17.71">ParameterValue</Column>
+    <Column width="7.71">Instance</Column>
+    <Column width="46">Steps</Column>
+  </Columns>
+</TestCase>

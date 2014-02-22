@@ -1,0 +1,11 @@
+set bits=_x64
+set installer_source_root=C:\Automation\ALMInstaller
+set installer_exe=SOIT50%bits%.exe
+
+echo %installer_source_root%\%installer_exe%
+echo %installer_source_root%\%installer_exe%.log
+start /wait %installer_source_root%\%installer_exe% /s /v"/qn INSTALLDIR=\"C:\Program Files\Serena\" /l*v \"%installer_source_root%\%installer_exe%.log\" REBOOT=\"ReallySuppress\""
+
+rem Then apply configuration snapshot
+rem Then iisreset
+rem Then JBOSS start

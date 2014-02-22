@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseName>Verify activities</TestCaseName>
+  <Description />
+  <Author>dverbovskiy, mgrybyk</Author>
+  <TestSteps>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestStart</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test starts</Steps>
+      <Instance />
+      <StepNumber>1</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Activities</FunctionalArea>
+      <ActionName>SelectActivitiesSection</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Selects "Activities" section in SBM Repository.</Steps>
+      <Instance />
+      <StepNumber>3</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Activities</FunctionalArea>
+      <ActionName>VerifyActivities</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>ActivityType</ParameterName>
+          <ParameterValue><![CDATA[Promote]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>MaxWaitInMinutes</ParameterName>
+          <ParameterValue><![CDATA[!minutesLarge!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Verify</Steps>
+      <Instance />
+      <StepNumber>4</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestEnd</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test ends</Steps>
+      <Instance />
+      <StepNumber>5</StepNumber>
+    </TestStep>
+  </TestSteps>
+  <Columns>
+    <Column width="10">StepNumber</Column>
+    <Column width="32.14">FunctionalArea</Column>
+    <Column width="32.29">ActionName</Column>
+    <Column width="27.86">ExecutionFlow</Column>
+    <Column width="20">ParameterName</Column>
+    <Column width="15.29">ParameterValue</Column>
+    <Column width="7.71">Instance</Column>
+    <Column width="77.71">Steps</Column>
+  </Columns>
+</TestCase>

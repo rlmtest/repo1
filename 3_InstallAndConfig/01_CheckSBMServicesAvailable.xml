@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseName>Verify SBM services availability</TestCaseName>
+  <Description />
+  <Author>Igor Spitkovskyi</Author>
+  <TestSteps>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestStart</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test starts</Steps>
+      <Instance />
+      <StepNumber>1</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.TestUtils</FunctionalArea>
+      <ActionName>IsSBMUpWaitAndVerify</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>MaxAttempts</ParameterName>
+          <ParameterValue><![CDATA[!atteptsLarge!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SleepSeconds</ParameterName>
+          <ParameterValue><![CDATA[60]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SBM_User</ParameterName>
+          <ParameterValue><![CDATA[!sbmUser!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SBM_Password</ParameterName>
+          <ParameterValue><![CDATA[!sbmUserPassword!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SBM_Endpoint</ParameterName>
+          <ParameterValue><![CDATA[!sbmWsEndpoint!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Checks and waits while SBM become Up</Steps>
+      <Instance />
+      <StepNumber>2</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestEnd</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test ends</Steps>
+      <Instance />
+      <StepNumber>3</StepNumber>
+    </TestStep>
+  </TestSteps>
+  <Columns>
+    <Column width="10">StepNumber</Column>
+    <Column width="28.29">FunctionalArea</Column>
+    <Column width="21.57">ActionName</Column>
+    <Column width="24">ExecutionFlow</Column>
+    <Column width="15.43">ParameterName</Column>
+    <Column width="15">ParameterValue</Column>
+    <Column width="10">Instance</Column>
+    <Column width="50">Steps</Column>
+  </Columns>
+</TestCase>

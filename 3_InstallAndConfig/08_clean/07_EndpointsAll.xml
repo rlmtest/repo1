@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseName>Create Endpoints</TestCaseName>
+  <Description />
+  <Author>mgrybyk</Author>
+  <TestSteps>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestStart</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test starts</Steps>
+      <Instance />
+      <StepNumber>1</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Environments</FunctionalArea>
+      <ActionName>SelectSolutionsEnvironmentsSection</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Selects "Environments"</Steps>
+      <Instance />
+      <StepNumber>2</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Environments</FunctionalArea>
+      <ActionName>SelectEnvironment</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>EnvironmentName</ParameterName>
+          <ParameterValue><![CDATA[!environment!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Selecting proper environment</Steps>
+      <Instance />
+      <StepNumber>3</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Environments</FunctionalArea>
+      <ActionName>CreateEndpoint</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>Endpoint Name</ParameterName>
+          <ParameterValue><![CDATA[!endpoint_SRA_App-Dest!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Endpoint URL</ParameterName>
+          <ParameterValue><![CDATA[!endpoint_SRA_App!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Authentication Type</ParameterName>
+          <ParameterValue><![CDATA[SSO]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>SRA_App</Steps>
+      <Instance />
+      <StepNumber>4</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Environments</FunctionalArea>
+      <ActionName>CreateEndpoint</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>Endpoint Name</ParameterName>
+          <ParameterValue><![CDATA[!endpoint_SRA_Env-Dest!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Endpoint URL</ParameterName>
+          <ParameterValue><![CDATA[!endpoint_SRA_Env!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Authentication Type</ParameterName>
+          <ParameterValue><![CDATA[SSO]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>SRA_Env</Steps>
+      <Instance />
+      <StepNumber>5</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Environments</FunctionalArea>
+      <ActionName>CreateEndpoint</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>Endpoint Name</ParameterName>
+          <ParameterValue><![CDATA[!endpoint_RelSvc-Dest!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Endpoint URL</ParameterName>
+          <ParameterValue><![CDATA[!endpoint_RelSvc!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Authentication Type</ParameterName>
+          <ParameterValue><![CDATA[SSO]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>relationshipService</Steps>
+      <Instance />
+      <StepNumber>6</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Environments</FunctionalArea>
+      <ActionName>CreateEndpoint</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>Endpoint Name</ParameterName>
+          <ParameterValue><![CDATA[!endpoint_JiraSearch-Dest!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Endpoint URL</ParameterName>
+          <ParameterValue><![CDATA[!endpoint_JiraSearch!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Authentication Type</ParameterName>
+          <ParameterValue><![CDATA[SSO]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>jira search</Steps>
+      <Instance />
+      <StepNumber>7</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestEnd</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test ends</Steps>
+      <Instance />
+      <StepNumber>8</StepNumber>
+    </TestStep>
+  </TestSteps>
+  <Columns>
+    <Column width="10">StepNumber</Column>
+    <Column width="36.29">FunctionalArea</Column>
+    <Column width="33.71">ActionName</Column>
+    <Column width="24">ExecutionFlow</Column>
+    <Column width="18.57">ParameterName</Column>
+    <Column width="24">ParameterValue</Column>
+    <Column width="7.71">Instance</Column>
+    <Column width="27.43">Steps</Column>
+  </Columns>
+</TestCase>

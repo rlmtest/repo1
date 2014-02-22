@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseName>Login to SBM Workspace</TestCaseName>
+  <Description />
+  <Author>Igor Spitkovskyi</Author>
+  <TestSteps>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestStart</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test starts</Steps>
+      <Instance />
+      <StepNumber>1</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.ALMUICommon</FunctionalArea>
+      <ActionName>SetGlobalParameters</ActionName>
+      <ExecutionFlow>Ignore Error Continue Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>WaitForObject</ParameterName>
+          <ParameterValue><![CDATA[!secondsSmall!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>AttemptsToGetObject</ParameterName>
+          <ParameterValue><![CDATA[!atteptsLargeXL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Hostname</ParameterName>
+          <ParameterValue><![CDATA[!sbmVmHost!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>DebugFlag</ParameterName>
+          <ParameterValue><![CDATA[!debugFlag!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Sets global parameters for tests run, like Hostname, WaitForObject, AttemptsToGetObject.</Steps>
+      <Instance />
+      <StepNumber>2</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.TestUtils</FunctionalArea>
+      <ActionName>RunBrowser</ActionName>
+      <ExecutionFlow>Ignore Error Continue Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>Browser</ParameterName>
+          <ParameterValue><![CDATA[!browser!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>OpenURL</ParameterName>
+          <ParameterValue><![CDATA[!sbmWorkspaceUrl!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Runs specified browser with URL to SBM.</Steps>
+      <Instance />
+      <StepNumber>3</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMUI.Auth</FunctionalArea>
+      <ActionName>Login</ActionName>
+      <ExecutionFlow>Ignore Error Continue Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>SBM_User</ParameterName>
+          <ParameterValue><![CDATA[!sbmUser!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SBM_Password</ParameterName>
+          <ParameterValue><![CDATA[!sbmUserPassword!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Performs simple login into SBM</Steps>
+      <Instance />
+      <StepNumber>4</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.ALMUICommon</FunctionalArea>
+      <ActionName>CloseBrowser</ActionName>
+      <ExecutionFlow>Ignore Error Continue Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>browser</ParameterName>
+          <ParameterValue><![CDATA[!browser!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Closes browser, by default - chrome.</Steps>
+      <Instance />
+      <StepNumber>5</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestEnd</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test ends</Steps>
+      <Instance />
+      <StepNumber>6</StepNumber>
+    </TestStep>
+  </TestSteps>
+  <Columns>
+    <Column width="10">StepNumber</Column>
+    <Column width="25.43">FunctionalArea</Column>
+    <Column width="19.29">ActionName</Column>
+    <Column width="27.86">ExecutionFlow</Column>
+    <Column width="20">ParameterName</Column>
+    <Column width="15">ParameterValue</Column>
+    <Column width="10">Instance</Column>
+    <Column width="50">Steps</Column>
+  </Columns>
+</TestCase>

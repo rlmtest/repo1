@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!-- This is config file to map a test case to xls path  --> 
+<tests>
+  <test-case name="t04" relPath="2_PrepareVM\04_1_VMsRevert.xml" />
+</tests>

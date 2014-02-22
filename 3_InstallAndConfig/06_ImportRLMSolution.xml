@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseName>small</TestCaseName>
+  <Description />
+  <Author>dverbovskiy</Author>
+  <TestSteps>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestStart</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test starts</Steps>
+      <Instance />
+      <StepNumber>1</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Solutions</FunctionalArea>
+      <ActionName>SelectSolutionsDeploymentSection</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Selects "Solutions" section in SBM Repository</Steps>
+      <Instance />
+      <StepNumber>2</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBMRepository.Solutions</FunctionalArea>
+      <ActionName>ImportSolution</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>SolutionName</ParameterName>
+          <ParameterValue><![CDATA[!RLMsolution!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Specifing Solution file</Steps>
+      <Instance />
+      <StepNumber>3</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestEnd</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test ends</Steps>
+      <Instance />
+      <StepNumber>4</StepNumber>
+    </TestStep>
+  </TestSteps>
+  <Columns>
+    <Column width="10">StepNumber</Column>
+    <Column width="32.14">FunctionalArea</Column>
+    <Column width="32.29">ActionName</Column>
+    <Column width="28.29">ExecutionFlow</Column>
+    <Column width="15.43">ParameterName</Column>
+    <Column width="17.86">ParameterValue</Column>
+    <Column width="7.71">Instance</Column>
+    <Column width="70.86">Steps</Column>
+  </Columns>
+</TestCase>

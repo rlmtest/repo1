@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestCaseName>Set Roles</TestCaseName>
+  <Description>for RLM users and groups</Description>
+  <Author>Mykola Grybyk</Author>
+  <TestSteps>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestStart</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test starts</Steps>
+      <Instance />
+      <StepNumber>1</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>Init</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>SBM_User</ParameterName>
+          <ParameterValue><![CDATA[!sbmUser!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SBM_Password</ParameterName>
+          <ParameterValue><![CDATA[!sbmUserPassword!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SBM_Host</ParameterName>
+          <ParameterValue><![CDATA[!sbmVmHost!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SSO_Host</ParameterName>
+          <ParameterValue><![CDATA[!sbmVmHost!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>SSO_Port</ParameterName>
+          <ParameterValue><![CDATA[!ssoPort!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Preparing for work with WebAdmin</Steps>
+      <Instance>i</Instance>
+      <StepNumber>2</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!User_zmf!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserName</ParameterName>
+          <ParameterValue><![CDATA[Max Cherkasskiy]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[!User_zmf_pwd!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create User for ZMF</Steps>
+      <Instance>i</Instance>
+      <StepNumber>3</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!User_zmf!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership</Steps>
+      <Instance>i</Instance>
+      <StepNumber>4</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!User_dmsys!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[!User_dmsys_pwd!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create User dmsys for RLM</Steps>
+      <Instance>i</Instance>
+      <StepNumber>5</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!User_dmsys!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership</Steps>
+      <Instance>i</Instance>
+      <StepNumber>6</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_RM!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserName</ParameterName>
+          <ParameterValue><![CDATA[Dave RM]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create or modify dave</Steps>
+      <Instance>i</Instance>
+      <StepNumber>7</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_RE!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserName</ParameterName>
+          <ParameterValue><![CDATA[Oscar RE]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create or modify oscar</Steps>
+      <Instance>i</Instance>
+      <StepNumber>8</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_PO!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserName</ParameterName>
+          <ParameterValue><![CDATA[Kaci PO]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create or modify kaci</Steps>
+      <Instance>i</Instance>
+      <StepNumber>9</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_rlmadmin!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserName</ParameterName>
+          <ParameterValue><![CDATA[RLM Admin]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create or modify rlmadmin</Steps>
+      <Instance>i</Instance>
+      <StepNumber>10</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_rlmuser!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserName</ParameterName>
+          <ParameterValue><![CDATA[RLM User]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create or modify rlmauser</Steps>
+      <Instance>i</Instance>
+      <StepNumber>11</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_lev3!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserName</ParameterName>
+          <ParameterValue><![CDATA[Vice President (Lev3)]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create or modify lev3</Steps>
+      <Instance>i</Instance>
+      <StepNumber>12</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_lev4!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserName</ParameterName>
+          <ParameterValue><![CDATA[CEO (Lev4)]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create or modify lev4</Steps>
+      <Instance>i</Instance>
+      <StepNumber>13</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_dev!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserName</ParameterName>
+          <ParameterValue><![CDATA[Emma Developer]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>UserPwd</ParameterName>
+          <ParameterValue><![CDATA[]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create or modify emma</Steps>
+      <Instance>i</Instance>
+      <StepNumber>14</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetGroup</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>GroupName</ParameterName>
+          <ParameterValue><![CDATA[!Grp_ProductOwners!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create group POs</Steps>
+      <Instance>i</Instance>
+      <StepNumber>15</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetGroup</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>GroupName</ParameterName>
+          <ParameterValue><![CDATA[!Grp_ReleaseEngineers!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create group REs</Steps>
+      <Instance>i</Instance>
+      <StepNumber>16</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetGroup</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>GroupName</ParameterName>
+          <ParameterValue><![CDATA[!Grp_ReleaseManagers!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Create group RMs</Steps>
+      <Instance>i</Instance>
+      <StepNumber>17</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetGroupRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>GroupName</ParameterName>
+          <ParameterValue><![CDATA[!Grp_ProductOwners!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_Product Owner</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_Level 2 Approvers</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for Group POs</Steps>
+      <Instance>i</Instance>
+      <StepNumber>18</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetGroupRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>GroupName</ParameterName>
+          <ParameterValue><![CDATA[!Grp_ReleaseManagers!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_Release Manager</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for Group RMs</Steps>
+      <Instance>i</Instance>
+      <StepNumber>19</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetGroupRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>GroupName</ParameterName>
+          <ParameterValue><![CDATA[!Grp_ReleaseEngineers!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_Release Engineer</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_Level 1 Approvers</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for Group REs</Steps>
+      <Instance>i</Instance>
+      <StepNumber>20</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUserRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_rlmadmin!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_RLM Administrator</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for rlmadmin</Steps>
+      <Instance>i</Instance>
+      <StepNumber>21</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUserRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_rlmuser!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_RLM User</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for rlmuser</Steps>
+      <Instance>i</Instance>
+      <StepNumber>22</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUserRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_lev3!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_Level 3 Approvers</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for lev3</Steps>
+      <Instance>i</Instance>
+      <StepNumber>23</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUserRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_lev4!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_Level 4 Approvers</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for lev4</Steps>
+      <Instance>i</Instance>
+      <StepNumber>24</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUserRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_dev!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_Level 1 Approvers</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_Developer</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for emma</Steps>
+      <Instance>i</Instance>
+      <StepNumber>25</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_RM!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!,!Grp_ReleaseManagers!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership for Dave</Steps>
+      <Instance>i</Instance>
+      <StepNumber>26</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_RE!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!,!Grp_ReleaseEngineers!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership for Oscar</Steps>
+      <Instance>i</Instance>
+      <StepNumber>27</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_PO!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!,!Grp_ProductOwners!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership for Kaci</Steps>
+      <Instance>i</Instance>
+      <StepNumber>28</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_rlmadmin!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership for rlmadmin</Steps>
+      <Instance>i</Instance>
+      <StepNumber>29</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_rlmuser!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership for rlmuser</Steps>
+      <Instance>i</Instance>
+      <StepNumber>30</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_lev3!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership for lev3</Steps>
+      <Instance>i</Instance>
+      <StepNumber>31</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_lev4!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership for lev4</Steps>
+      <Instance>i</Instance>
+      <StepNumber>32</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetMembershipForUser</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!usr_dev!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Groups</ParameterName>
+          <ParameterValue><![CDATA[!Grp_Everyone!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set Group membership for emma</Steps>
+      <Instance>i</Instance>
+      <StepNumber>33</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUserRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!sbmUser!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_*</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for User admin</Steps>
+      <Instance>i</Instance>
+      <StepNumber>34</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.SBM.WebAdmin</FunctionalArea>
+      <ActionName>SetUserRoles</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters>
+        <Parameter>
+          <ParameterName>UserLogin</ParameterName>
+          <ParameterValue><![CDATA[!User_zmf!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>ProjectName</ParameterName>
+          <ParameterValue><![CDATA[!Prj_ALL!]]></ParameterValue>
+        </Parameter>
+        <Parameter>
+          <ParameterName>Role_*</ParameterName>
+          <ParameterValue><![CDATA[!RoleEnabled!]]></ParameterValue>
+        </Parameter>
+      </Parameters>
+      <Steps>Set roles for User admin</Steps>
+      <Instance>i</Instance>
+      <StepNumber>35</StepNumber>
+    </TestStep>
+    <TestStep>
+      <FunctionalArea>Solutions.DevUtils</FunctionalArea>
+      <ActionName>SetTestEnd</ActionName>
+      <ExecutionFlow>Record Error Stop Testcase</ExecutionFlow>
+      <Parameters />
+      <Steps>Test ends</Steps>
+      <Instance />
+      <StepNumber>36</StepNumber>
+    </TestStep>
+  </TestSteps>
+  <Columns>
+    <Column width="10">StepNumber</Column>
+    <Column width="24">FunctionalArea</Column>
+    <Column width="21.71">ActionName</Column>
+    <Column width="24">ExecutionFlow</Column>
+    <Column width="22.14">ParameterName</Column>
+    <Column width="22">ParameterValue</Column>
+    <Column width="7.71">Instance</Column>
+    <Column width="32.29">Steps</Column>
+  </Columns>
+</TestCase>

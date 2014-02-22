@@ -1,0 +1,1 @@
+drop user serena_ra cascade;
