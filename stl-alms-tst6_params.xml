@@ -2,7 +2,7 @@
 <TestCaseParameters>
   <Parameter>
     <Name><![CDATA[dbVmHost]]></Name>
-    <Value><![CDATA[stl-alms-tst66]]></Value>
+    <Value><![CDATA[stl-alms-tst6]]></Value>
     <Description><![CDATA[]]></Description>
   </Parameter>
   <Parameter>
