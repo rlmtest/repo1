@@ -1,1 +1,0 @@
-start /wait exit | sqlplus -L -S system/manager@oalm @"C:\Automation\Solutions.Test\AutoDeployRLM\7_InstallSRA\stl-qa-oalmt1\drop_schema.sql"
