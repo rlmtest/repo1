@@ -2,7 +2,7 @@
 <TestCaseParameters>
   <Parameter>
     <Name><![CDATA[sbmVmHost]]></Name>
-    <Value><![CDATA[stl-qa-oalmt22]]></Value>
+    <Value><![CDATA[stl-qa-oalmt2]]></Value>
     <Description><![CDATA[]]></Description>
   </Parameter>
   <Parameter>
