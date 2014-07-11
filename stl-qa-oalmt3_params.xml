@@ -13,7 +13,7 @@
   <Parameter>
     <Name><![CDATA[sbmVmUser]]></Name>
     <Value><![CDATA[Administrator]]></Value>
-    <Description><![CDATA[]]></Description>
+    <Description><![CDATA[1]]></Description>
   </Parameter>
   <Parameter>
     <Name><![CDATA[sbmVmUserPassword]]></Name>
